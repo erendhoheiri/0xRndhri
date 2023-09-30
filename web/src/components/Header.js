@@ -3,20 +3,22 @@ import { Link } from 'gatsby';
 import clsx from 'clsx';
 import axios from 'axios';
 import { MdClose, MdMenu, MdSearch } from 'react-icons/md';
-import { SlRefresh } from 'react-icons/sl';
+import { SlRefresh, SlBubbles, SlArrowLeftCircle } from 'react-icons/sl';
 import HeaderStyles from '../styles/HeaderStyles';
 import Logo from './Logo';
 import ActionButton from './buttons/ActionButton';
 import { menu } from '../constants/menu';
 import { SearchModalContext } from '../contexts/searchModalContext';
+import { IsAdminContext } from '../contexts/isAdminContext';
 import { useLocation } from '@reach/router';
+import { Tooltip } from 'react-tooltip';
 
 function Header() {
   const location = useLocation();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
   const [isRootURL, setIsRootURL] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(null);
+  const { isAdmin, logoutAsAdmin } = useContext(IsAdminContext);
   const { openSearchModal } = useContext(SearchModalContext);
 
   const handleSearchModalOpen = () => {
@@ -48,19 +50,23 @@ function Header() {
   };
 
   const handleRefresh = () => {
-    alert('refreshing');
+    alert('Memuat Konten Baru');
     axios.post(`${process.env.GATSBY_BASE_URL}/__refresh`).then(res => {
-      console.log('refreshed', res);
+      console.log('Memuat Konten Baru', res);
     });
   };
 
-  useEffect(() => {
-    // Check if localStorage is available
+  const handleDashboard = () => {
     if (typeof window !== 'undefined') {
-      const storedAdmin = localStorage.getItem('admin');
-      setIsAdmin(storedAdmin);
+      window.open(
+        'https://fppi.sanity.studio/',
+        '_blank',
+        'rel=noopener noreferrer'
+      );
     }
-  }, []);
+  };
+
+  const handleLogout = () => logoutAsAdmin();
 
   useEffect(() => {
     if (location.pathname === '/') {
@@ -148,17 +154,53 @@ function Header() {
                   </div>
                 </li>
                 {isAdmin && (
-                  <div className='searchIcon'>
-                    <div
-                      className='searchIcon__wrapper'
-                      onKeyDown={handleSearchModalOpen}
-                      tabIndex={0}
-                      role='button'
-                      onClick={() => handleRefresh()}
-                    >
-                      <SlRefresh />
+                  <>
+                    <div className='searchIcon'>
+                      <div
+                        className='searchIcon__wrapper'
+                        onKeyDown={handleSearchModalOpen}
+                        tabIndex={0}
+                        role='button'
+                        onClick={() => handleRefresh()}
+                      >
+                        {isNavOpen ? (
+                          <p style={{ fontSize: '12px' }}>Refresh Content</p>
+                        ) : (
+                          <SlRefresh />
+                        )}
+                      </div>
                     </div>
-                  </div>
+                    <div className='searchIcon'>
+                      <div
+                        className='searchIcon__wrapper'
+                        onKeyDown={handleSearchModalOpen}
+                        tabIndex={0}
+                        role='button'
+                        onClick={() => handleDashboard()}
+                      >
+                        {isNavOpen ? (
+                          <p style={{ fontSize: '12px' }}>Dashboard</p>
+                        ) : (
+                          <p style={{ fontSize: '11px' }}>Dashboard</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className='searchIcon'>
+                      <div
+                        className='searchIcon__wrapper'
+                        onKeyDown={handleSearchModalOpen}
+                        tabIndex={0}
+                        role='button'
+                        onClick={() => handleLogout()}
+                      >
+                        {isNavOpen ? (
+                          <p style={{ fontSize: '11px' }}>Logout</p>
+                        ) : (
+                          <SlArrowLeftCircle />
+                        )}
+                      </div>
+                    </div>
+                  </>
                 )}
               </ul>
             </nav>
