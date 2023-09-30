@@ -50,9 +50,13 @@ function Header() {
 
   const handleRefresh = () => {
     alert('Memuat Konten Baru');
-    axios.post(`${process.env.GATSBY_BASE_URL}/__refresh`).then(res => {
-      console.log('Memuat Konten Baru', res);
-    });
+    axios
+      .post(
+        `${process.env.GATSBY_BASE_ENABLE_GATSBY_REFRESH_ENDPOINT}/__refresh`
+      )
+      .then(res => {
+        console.log('Memuat Konten Baru', res);
+      });
   };
 
   const handleDashboard = () => {
