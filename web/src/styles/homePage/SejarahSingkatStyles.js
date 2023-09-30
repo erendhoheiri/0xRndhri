@@ -67,7 +67,7 @@ export const SejarahSingkatStyles = styled.div`
   // }
   padding: 7rem 7rem 5rem 7rem;
   @media screen and (max-width: 768px) {
-    padding: 6rem 5rem;
+    padding: 5rem 2rem;
   }
   h1 {
     font-size: 5rem;
@@ -92,7 +92,7 @@ export const SejarahSingkatContent = styled.div`
   padding-top: 2rem;
   font-size: 2rem;
   line-height: 3rem;
-  text-align: justify;
+  // text-align: justify;
   @media screen and (max-width: 768px) {
     font-size: 1.5rem;
     line-height: 2.5rem;
