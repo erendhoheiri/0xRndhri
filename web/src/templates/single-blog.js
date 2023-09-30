@@ -49,10 +49,6 @@ function SingleBlog({ data }) {
   const urlBlogSlug = urlBlog?.split('/').pop();
   const url = `https://rakyatkuasa.com/blogs/${urlBlogSlug}`;
 
-  useEffect(() => {
-    location.reload();
-  }, []);
-
   return (
     <SingleBlogStyles>
       <SEO title={blog.title} />
