@@ -14,7 +14,7 @@ function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
   const [isRootURL, setIsRootURL] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(undefined);
+  // const [isAdmin, setIsAdmin] = useState(undefined);
   const { openSearchModal } = useContext(SearchModalContext);
 
   const handleSearchModalOpen = () => {
@@ -46,9 +46,9 @@ function Header() {
     window.addEventListener('scroll', changeNav);
   }, []);
 
-  useEffect(() => {
-    setIsAdmin(localStorage.getItem('admin'));
-  }, []);
+  // useEffect(() => {
+  //   setIsAdmin(localStorage.getItem('admin'));
+  // }, []);
 
   useEffect(() => {
     if (window.location.pathname === '/') {
@@ -135,19 +135,19 @@ function Header() {
                     <MdSearch />
                   </div>
                 </li>
-                {isAdmin && (
-                  <div className='searchIcon'>
-                    <div
-                      className='searchIcon__wrapper'
-                      onKeyDown={handleSearchModalOpen}
-                      tabIndex={0}
-                      role='button'
-                      onClick={() => handleRefresh()}
-                    >
-                      <SlRefresh />
-                    </div>
+                {/* {isAdmin && ( */}
+                <div className='searchIcon'>
+                  <div
+                    className='searchIcon__wrapper'
+                    onKeyDown={handleSearchModalOpen}
+                    tabIndex={0}
+                    role='button'
+                    onClick={() => handleRefresh()}
+                  >
+                    <SlRefresh />
                   </div>
-                )}
+                </div>
+                {/* )} */}
               </ul>
             </nav>
           </div>
