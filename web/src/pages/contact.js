@@ -38,7 +38,7 @@ function Contact() {
           <div className='contact__container'>
             <div className='google__maps'>
               <iframe
-                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63448.53124697642!2d106.81456618957141!3d-6.324871517559259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eda4f343620d%3A0xa92a7cf6c52e3fa7!2sPasar%20Rebo%2C%20East%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1684048641007!5m2!1sen!2sid'
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.70426823905!2d106.87753237510539!3d-6.302533261681814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed8943725ff1%3A0x98f67ff3447a31e8!2sSekretariat%20Nasional%20FPPI!5e0!3m2!1sen!2sid!4v1696050165245!5m2!1sen!2sid'
                 width='100%'
                 height='450'
                 frameBorder='0'
@@ -55,13 +55,15 @@ function Contact() {
               <div className='contact__details__item'>
                 <h3>Alamat</h3>
                 <p>
-                  Jl. Pasar Rebo Raya No. 1, Pasar Rebo, Jakarta Timur, DKI
-                  Jakarta 13760
+                  Jl. Puskesmas No.1, RT.10/RW.4, Dukuh, Kec. Kramat jati, Kota
+                  Jakarta Timur, Daerah Khusus Ibukota Jakarta 13550
                 </p>
                 <h3>Email</h3>
-                <a href='mailto:someone@example.com'>hi@rakyatkuasa.com</a>
+                <a href='mailto:someone@example.com'>
+                  rakyatkuasa123@gmail.com
+                </a>
                 <h3>Telepon</h3>
-                <p>021-12345678</p>
+                <p>0812-9894-5139 (Sari)</p>
               </div>
             </div>
           </div>
