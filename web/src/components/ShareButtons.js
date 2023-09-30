@@ -1,4 +1,5 @@
 import React from 'react';
+import { ShareButtonStyle } from '../styles/ShareButton';
 
 import {
   FacebookShareButton,
@@ -13,7 +14,7 @@ import {
 
 const ShareButtons = ({ title, url, twitterHandle, tags }) => {
   return (
-    <div>
+    <ShareButtonStyle>
       <FacebookShareButton url={url}>
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
@@ -34,7 +35,7 @@ const ShareButtons = ({ title, url, twitterHandle, tags }) => {
       <WhatsappShareButton url={url} title={title}>
         <WhatsappIcon size={32} round={true} />
       </WhatsappShareButton>
-    </div>
+    </ShareButtonStyle>
   );
 };
 export default ShareButtons;

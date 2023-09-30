@@ -5,6 +5,7 @@ import PageHeader from '../components/PageHeader';
 import PageSpace from '../components/PageSpace';
 import SEO from '../components/seo';
 import { AboutUsStyles } from '../styles/AboutUsStyles';
+import FeaturedBlogs from '../components/homePage/FeaturedBlogs';
 
 function AboutUs() {
   const images = {
@@ -170,6 +171,7 @@ function AboutUs() {
             <div class='last-quote'>Lahir untuk Respublica</div>
           </div>
         </div>
+        <FeaturedBlogs />
       </AboutUsStyles>
     </PageSpace>
   );
