@@ -15,7 +15,7 @@ const ShareButtons = ({ title, url, twitterHandle, tags }) => {
   return (
     <div>
       <FacebookShareButton url={url}>
-        <FacebookIcon size={40} round={true} />
+        <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
 
       <TwitterShareButton
@@ -24,15 +24,15 @@ const ShareButtons = ({ title, url, twitterHandle, tags }) => {
         via={twitterHandle}
         hashtags={tags}
       >
-        <TwitterIcon size={40} round={true} />
+        <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
 
       <RedditShareButton url={url} title={title}>
-        <RedditIcon size={40} round={true} />
+        <RedditIcon size={32} round={true} />
       </RedditShareButton>
 
       <WhatsappShareButton url={url} title={title}>
-        <WhatsappIcon size={40} round={true} />
+        <WhatsappIcon size={32} round={true} />
       </WhatsappShareButton>
     </div>
   );
