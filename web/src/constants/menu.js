@@ -1,6 +1,6 @@
 export const menu = [
   {
-    title: 'Home',
+    title: 'Beranda',
     path: '/'
   },
   {
