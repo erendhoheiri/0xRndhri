@@ -57,6 +57,7 @@ export const SingleBlogStyles = styled.div`
     }
   }
   .share__button {
+    -webkit-appearance: none
     display: flex;
     flex-direction: column;
     justify-content: center;
