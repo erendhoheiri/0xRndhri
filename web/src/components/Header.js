@@ -14,8 +14,7 @@ function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
   const [isRootURL, setIsRootURL] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
-  const admin = localStorage.getItem('admin');
+  const [isAdmin, setIsAdmin] = useState(undefined);
   const { openSearchModal } = useContext(SearchModalContext);
 
   const handleSearchModalOpen = () => {
@@ -48,10 +47,8 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    if (admin) {
-      setIsAdmin(true);
-    }
-  }, [admin]);
+    setIsAdmin(localStorage.getItem('admin'));
+  }, []);
 
   useEffect(() => {
     if (window.location.pathname === '/') {
