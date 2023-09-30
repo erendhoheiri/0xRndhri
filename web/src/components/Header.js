@@ -48,17 +48,6 @@ function Header() {
     }
   };
 
-  const handleRefresh = async () => {
-    alert('Memuat Konten Baru');
-    try {
-      await axios.post(`${process.env.GATSBY_BASE_URL}/__refresh`).then(res => {
-        console.log('Memuat Konten Baru', res);
-      });
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
   const handleDashboard = () => {
     if (typeof window !== 'undefined') {
       window.open(
@@ -158,21 +147,6 @@ function Header() {
                 </li>
                 {isAdmin && (
                   <>
-                    <div className='searchIcon'>
-                      <div
-                        className='searchIcon__wrapper'
-                        onKeyDown={handleSearchModalOpen}
-                        tabIndex={0}
-                        role='button'
-                        onClick={() => handleRefresh()}
-                      >
-                        {isNavOpen ? (
-                          <p style={{ fontSize: '12px' }}>Refresh Content</p>
-                        ) : (
-                          <SlRefresh />
-                        )}
-                      </div>
-                    </div>
                     <div className='searchIcon'>
                       <div
                         className='searchIcon__wrapper'
