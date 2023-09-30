@@ -1,5 +1,7 @@
 import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { MapContainer, TileLayer } from 'react-leaflet';
+// import 'leaflet/dist/leaflet.css';
 import ParagraphText from '../components/typography/ParagraphText';
 import PageHeader from '../components/PageHeader';
 import PageSpace from '../components/PageSpace';
@@ -22,31 +24,33 @@ function Contact() {
     width: 640,
     height: 320
   };
+
   return (
     <PageSpace top={80} bottom={10}>
       <ContactStyles>
         <div className='container'>
-          <SEO title={'Contact'} />
-          <PageHeader title={'Kontak'} className='pageHeader'>
+          <SEO title='Contact' />
+          <PageHeader title='Kontak' className='pageHeader'>
             <ParagraphText>
               Hubungi kami untuk berkolaborasi, berkomunikasi, dan berdiskusi
               tentang isu-isu Kerakyatan dan bagaimana kita dapat bekerjasama
               untuk kemanusiaan.
             </ParagraphText>
-            <GatsbyImage image={images} alt={'kontak'} className='coverImage' />
+            <GatsbyImage image={images} alt='kontak' className='coverImage' />
           </PageHeader>
           <div className='contact__container'>
             <div className='google__maps'>
-              <iframe
-                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.70426823905!2d106.87753237510539!3d-6.302533261681814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed8943725ff1%3A0x98f67ff3447a31e8!2sSekretariat%20Nasional%20FPPI!5e0!3m2!1sen!2sid!4v1696050165245!5m2!1sen!2sid'
-                width='100%'
-                height='450'
-                frameBorder='0'
-                style={{ border: 0 }}
-                allowFullScreen=''
-                aria-hidden='false'
-                tabIndex='0'
-              />
+              <MapContainer
+                center={[-6.302453275409871, 106.88008584165314]}
+                zoom={30}
+                scrollWheelZoom={false}
+                style={{ width: '100%', height: 'calc(100vh - 4rem)' }}
+              >
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                />
+              </MapContainer>
             </div>
             <div className='contact__details'>
               <div className='contact__details__title'>
@@ -54,12 +58,17 @@ function Contact() {
               </div>
               <div className='contact__details__item'>
                 <h3>Alamat</h3>
-                <p>
+                <a
+                  href='https://www.google.com/maps/place/Sekretariat+Nasional+FPPI/@-6.3025333,106.8775324,17z/data=!4m16!1m9!3m8!1s0x2e69ed8943725ff1:0x98f67ff3447a31e8!2sSekretariat+Nasional+FPPI!8m2!3d-6.3025386!4d106.8801073!9m1!1b1!16s%2Fg%2F11sv00pc_t!3m5!1s0x2e69ed8943725ff1:0x98f67ff3447a31e8!8m2!3d-6.3025386!4d106.8801073!16s%2Fg%2F11sv00pc_t?entry=ttu'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <b>Sekretariat Nasional FPPI</b> <br />
                   Jl. Puskesmas No.1, RT.10/RW.4, Dukuh, Kec. Kramat jati, Kota
                   Jakarta Timur, Daerah Khusus Ibukota Jakarta 13550
-                </p>
+                </a>
                 <h3>Email</h3>
-                <a href='mailto:someone@example.com'>
+                <a href='mailto:rakyatkuasa123@gmail.com'>
                   rakyatkuasa123@gmail.com
                 </a>
                 <h3>Telepon</h3>

@@ -22,6 +22,12 @@ module.exports = {
       resolve: 'gatsby-plugin-styled-components'
     },
     {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true
+      }
+    },
+    {
       resolve: `gatsby-plugin-local-search`,
       options: {
         name: `blogs`,

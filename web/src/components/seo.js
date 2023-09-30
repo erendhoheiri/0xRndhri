@@ -24,9 +24,9 @@ const SEO = ({ title, description }) => {
   return (
     <Helmet title={seo.title}>
       <meta name='description' content={seo.description} />
-      <meta
-        http-equiv='Content-Security-Policy'
-        content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;"
+      <link
+        rel='stylesheet'
+        href='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'
       />
     </Helmet>
   );
