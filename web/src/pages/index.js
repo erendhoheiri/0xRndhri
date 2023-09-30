@@ -6,6 +6,7 @@ import Persebaran from '../components/homePage/Persebaran';
 import QouteManipol from '../components/homePage/QouteManipol';
 import TopCategories from '../components/homePage/TopCategories';
 import SEO from '../components/seo';
+import { Analytics } from '@vercel/analytics/react';
 
 function IndexPage() {
   return (
@@ -19,6 +20,7 @@ function IndexPage() {
         <FeaturedBlogs />
         <TopCategories />
       </div>
+      <Analytics />
     </>
   );
 }
