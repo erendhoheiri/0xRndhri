@@ -7,7 +7,10 @@ import QouteManipol from '../components/homePage/QouteManipol';
 import TopCategories from '../components/homePage/TopCategories';
 import SEO from '../components/seo';
 import { Analytics } from '@vercel/analytics/react';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
+config.autoAddCss = false;
 function IndexPage() {
   return (
     <>
