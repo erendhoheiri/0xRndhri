@@ -16,11 +16,12 @@ export const SearchResultItemStyles = styled(Link)`
   }
   .title {
     font-size: 1.6rem;
+    color: var(--primary);
   }
   .categoriesText {
     font-size: 1.3rem;
+    color: #fff;
     a {
-      color: var(--grey);
       &:hover {
         text-decoration: underline;
       }
