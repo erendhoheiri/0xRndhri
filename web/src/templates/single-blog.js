@@ -1,6 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { format } from 'date-fns';
 import { BiCategory } from 'react-icons/bi';
 import { FiCalendar, FiUser } from 'react-icons/fi';
@@ -48,6 +48,10 @@ function SingleBlog({ data }) {
   const urlBlog = location.href;
   const urlBlogSlug = urlBlog?.split('/').pop();
   const url = `https://rakyatkuasa.com/blogs/${urlBlogSlug}`;
+
+  useEffect(() => {
+    location.reload();
+  }, []);
 
   return (
     <SingleBlogStyles>
