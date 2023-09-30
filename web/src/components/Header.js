@@ -48,11 +48,15 @@ function Header() {
     }
   };
 
-  const handleRefresh = () => {
+  const handleRefresh = async () => {
     alert('Memuat Konten Baru');
-    axios.post(`${process.env.GATSBY_BASE_URL}/__refresh`).then(res => {
-      console.log('Memuat Konten Baru', res);
-    });
+    try {
+      await axios.post(`${process.env.GATSBY_BASE_URL}/__refresh`).then(res => {
+        console.log('Memuat Konten Baru', res);
+      });
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const handleDashboard = () => {
