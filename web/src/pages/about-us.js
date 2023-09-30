@@ -170,8 +170,8 @@ function AboutUs() {
             </div>
             <div class='last-quote'>Lahir untuk Respublica</div>
           </div>
+          <FeaturedBlogs />
         </div>
-        <FeaturedBlogs />
       </AboutUsStyles>
     </PageSpace>
   );
