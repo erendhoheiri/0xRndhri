@@ -43,7 +43,9 @@ function Header() {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', changeNav);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', changeNav);
+    }
   }, []);
 
   // useEffect(() => {
