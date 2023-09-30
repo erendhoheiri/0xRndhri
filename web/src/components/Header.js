@@ -11,7 +11,6 @@ import { menu } from '../constants/menu';
 import { SearchModalContext } from '../contexts/searchModalContext';
 import { IsAdminContext } from '../contexts/isAdminContext';
 import { useLocation } from '@reach/router';
-import { Tooltip } from 'react-tooltip';
 
 function Header() {
   const location = useLocation();
