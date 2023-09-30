@@ -11,6 +11,7 @@ import { SingleBlogStyles } from '../styles/blog/SingleBlogStyles';
 import MyPortableText from '../components/MyPortableText';
 import SEO from '../components/seo';
 import ShareButtons from '../components/ShareButtons';
+import { useLocation } from '@reach/router';
 
 export const postQuery = graphql`
   query SingleBlogQuery($id: String!) {
@@ -41,10 +42,11 @@ export const postQuery = graphql`
 `;
 
 function SingleBlog({ data }) {
+  const location = useLocation();
+
   const blog = data.sanityBlog;
-  const urlBlog = window.location.href;
-  // separate urlBlog between the base url and the slug
-  const urlBlogSlug = urlBlog.split('/').pop();
+  const urlBlog = location.href;
+  const urlBlogSlug = urlBlog?.split('/').pop();
   const url = `https://rakyatkuasa.com/blogs/${urlBlogSlug}`;
 
   return (

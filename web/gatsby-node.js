@@ -1,3 +1,17 @@
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /bad-module/,
+            use: loaders.null()
+          }
+        ]
+      }
+    });
+  }
+};
 exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = parseInt(process.env.GATSBY_POST_PER_PAGE) || 10;
   // templates path
@@ -51,29 +65,29 @@ exports.createPages = async ({ graphql, actions }) => {
   const authors = result.data.allSanityAuthor.nodes;
 
   // single blogs pages
-  blogs.forEach((blog) => {
+  blogs.forEach(blog => {
     createPage({
       path: `/blogs/${blog.slug.current}`,
       component: singleBlogTemplate,
-      context: { id: blog.id },
+      context: { id: blog.id }
     });
   });
 
   // single category pages
-  categories.forEach((category) => {
+  categories.forEach(category => {
     createPage({
       path: `/categories/${category.slug.current}`,
       component: singleCategoryTemplate,
-      context: { id: category.id },
+      context: { id: category.id }
     });
   });
 
   // single Author pages
-  authors.forEach((author) => {
+  authors.forEach(author => {
     createPage({
       path: `/authors/${author.slug.current}`,
       component: singleAuthorTemplate,
-      context: { id: author.id },
+      context: { id: author.id }
     });
   });
 
@@ -87,8 +101,8 @@ exports.createPages = async ({ graphql, actions }) => {
         limit: postsPerPage,
         offset: index * postsPerPage,
         numberOfPages: totalBlogListPages,
-        currentPage: index + 1,
-      },
+        currentPage: index + 1
+      }
     });
   });
 
@@ -102,8 +116,8 @@ exports.createPages = async ({ graphql, actions }) => {
         limit: postsPerPage,
         offset: index * postsPerPage,
         numberOfPages: totalCategoryListPages,
-        currentPage: index + 1,
-      },
+        currentPage: index + 1
+      }
     });
   });
 
@@ -117,8 +131,8 @@ exports.createPages = async ({ graphql, actions }) => {
         limit: postsPerPage,
         offset: index * postsPerPage,
         numberOfPages: totalAuthorListPages,
-        currentPage: index + 1,
-      },
+        currentPage: index + 1
+      }
     });
   });
 };

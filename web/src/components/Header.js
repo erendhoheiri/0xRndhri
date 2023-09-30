@@ -9,25 +9,37 @@ import Logo from './Logo';
 import ActionButton from './buttons/ActionButton';
 import { menu } from '../constants/menu';
 import { SearchModalContext } from '../contexts/searchModalContext';
+import { useLocation } from '@reach/router';
 
 function Header() {
+  const location = useLocation();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
   const [isRootURL, setIsRootURL] = useState(false);
-  // const [isAdmin, setIsAdmin] = useState(undefined);
+  const [isAdmin, setIsAdmin] = useState(null);
   const { openSearchModal } = useContext(SearchModalContext);
 
   const handleSearchModalOpen = () => {
     openSearchModal();
   };
 
-  const changeNav = () => {
-    if (window.scrollY >= 100) {
-      setScrollNav(true);
-    } else {
-      setScrollNav(false);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 100) {
+        setScrollNav(true);
+      } else {
+        setScrollNav(false);
+      }
+    };
+
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleNavItemClick = () => {
     if (isNavOpen) {
@@ -43,22 +55,20 @@ function Header() {
   };
 
   useEffect(() => {
+    // Check if localStorage is available
     if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', changeNav);
+      const storedAdmin = localStorage.getItem('admin');
+      setIsAdmin(storedAdmin);
     }
   }, []);
 
-  // useEffect(() => {
-  //   setIsAdmin(localStorage.getItem('admin'));
-  // }, []);
-
   useEffect(() => {
-    if (window.location.pathname === '/') {
+    if (location.pathname === '/') {
       setIsRootURL(true);
     } else {
       setIsRootURL(false);
     }
-  }, [window.location.pathname]);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (isNavOpen) {
@@ -137,19 +147,19 @@ function Header() {
                     <MdSearch />
                   </div>
                 </li>
-                {/* {isAdmin && ( */}
-                <div className='searchIcon'>
-                  <div
-                    className='searchIcon__wrapper'
-                    onKeyDown={handleSearchModalOpen}
-                    tabIndex={0}
-                    role='button'
-                    onClick={() => handleRefresh()}
-                  >
-                    <SlRefresh />
+                {isAdmin && (
+                  <div className='searchIcon'>
+                    <div
+                      className='searchIcon__wrapper'
+                      onKeyDown={handleSearchModalOpen}
+                      tabIndex={0}
+                      role='button'
+                      onClick={() => handleRefresh()}
+                    >
+                      <SlRefresh />
+                    </div>
                   </div>
-                </div>
-                {/* )} */}
+                )}
               </ul>
             </nav>
           </div>
