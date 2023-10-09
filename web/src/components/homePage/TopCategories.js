@@ -28,12 +28,12 @@ function TopCategories() {
   return (
     <TopCategoriesStyles>
       <SectionTitle>Pilihan Kategori</SectionTitle>
-      <ParagraphText className='info'></ParagraphText>
+      <ParagraphText className='info' />
       <CategoryGrid categories={categories} />
       <div className='button-wrapper'>
         <ButtonStyles
           className='button-see'
-          to={`/categories`}
+          to='/categories'
           variant={buttonTypes.primary}
         >
           Lebih Banyak..

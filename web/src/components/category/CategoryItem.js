@@ -8,9 +8,11 @@ import { Title } from '../typography/Title';
 function CategoryItem({ title, description, slug }) {
   return (
     <CategoryItemStyles>
-      <Title className='title'>{title}</Title>
-      <div className='text'>
-        <MyPortableText value={description} />
+      <div className='wrapper'>
+        <Title className='title'>{title}</Title>
+        <div className='text'>
+          <MyPortableText value={description} />
+        </div>
       </div>
       <Button
         className='button-read'

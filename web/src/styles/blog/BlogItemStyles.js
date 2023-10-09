@@ -23,6 +23,9 @@ export const BlogItemStyles = styled.div`
     .img [data-main-image] {
       transform: scale(1.05);
     }
+    .title {
+      color: var(--primary);
+    }
   }
   .categoriesText {
     a {
