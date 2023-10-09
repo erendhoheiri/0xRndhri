@@ -23,10 +23,10 @@ function SejarahSingkat() {
       <div className='button-wrapper'>
         <ButtonStyles
           className='button-see'
-          to={`/about-us`}
+          to='/about-us'
           variant={buttonTypes.primary}
         >
-          Selengkapnya
+          Selengkapnya -{'>'}
         </ButtonStyles>
       </div>
     </SejarahSingkatStyles>

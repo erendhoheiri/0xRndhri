@@ -74,8 +74,8 @@ export const SejarahSingkatStyles = styled.div`
   }
   .button-wrapper {
     display: flex;
-    justify-content: center;
-    margin-top: 4rem;
+    justify-content: flex-end;
+    margin-top: 3rem;
     .button-see {
       text-align: center;
       background: var(--secondary);

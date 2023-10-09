@@ -40,15 +40,15 @@ function FeaturedBlogs() {
   return (
     <FeaturedBlogsStyles>
       <SectionTitle>Kabar Terbaru</SectionTitle>
-      <ParagraphText className='featuredBlogs__text'></ParagraphText>
+      <ParagraphText className='featuredBlogs__text' />
       <BlogGrid blogs={featuredBlogs} />
       <div className='button-wrapper'>
         <ButtonStyles
           className='button-see'
-          to={`/blogs`}
+          to='/blogs'
           variant={buttonTypes.primary}
         >
-          Lebih Banyak..
+          Lihat semua berita -{'>'}
         </ButtonStyles>
       </div>
     </FeaturedBlogsStyles>

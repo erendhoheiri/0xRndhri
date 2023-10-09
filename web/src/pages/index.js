@@ -19,7 +19,12 @@ function IndexPage() {
       <div className='container'>
         <SejarahSingkat />
         {/* <Persebaran /> */}
-        <QouteManipol />
+        <QouteManipol
+          quote={`Tugas pergerakan adalah menyusun penjelasan sistematis tentang
+          revolusi sebagai tindakan melangsungkan pembebasan untuk kelas
+          tertindas oleh kelas tertindas dan dalam konteks ketertindasan
+          masing-masing. (Manifesto Politik FPPI)`}
+        />
         <FeaturedBlogs />
         <TopCategories />
       </div>

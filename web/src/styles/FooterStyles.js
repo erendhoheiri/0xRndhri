@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterStyles = styled.footer`
   padding: 5rem 0 2rem 0;
   text-align: center;
-  background-color: var(--black-2);
+  background-color: var(--black-1);
   .footer__text {
     text-align: center;
     margin: 0 auto;

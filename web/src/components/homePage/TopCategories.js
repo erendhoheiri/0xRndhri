@@ -36,7 +36,7 @@ function TopCategories() {
           to='/categories'
           variant={buttonTypes.primary}
         >
-          Lebih Banyak..
+          Lihat semua kategori -{'>'}
         </ButtonStyles>
       </div>
     </TopCategoriesStyles>

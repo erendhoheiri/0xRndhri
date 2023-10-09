@@ -27,8 +27,8 @@ function AboutUs() {
     <PageSpace top={80} bottom={100}>
       <AboutUsStyles>
         <div className='container'>
-          <SEO title={'About Us'} />
-          <PageHeader title={'Tentang Kami'} className='pageHeader'>
+          <SEO title='About Us' />
+          <PageHeader title='Tentang Kami' className='pageHeader'>
             <ParagraphText>
               Front Perjuangan Pemuda Indonesia disingkat FPPI merupakan
               organisasi pergerakan pemuda yang lahir sebagai respon terhadap
@@ -38,7 +38,7 @@ function AboutUs() {
             </ParagraphText>
             <GatsbyImage
               image={images}
-              alt={'tentang-kami'}
+              alt='tentang-kami'
               className='coverImage'
             />
           </PageHeader>
@@ -168,7 +168,7 @@ function AboutUs() {
                 <li>9. Bubarkan Lembaga Teritorial dan Ekstrayudisial TNI</li>
               </ol>
             </div>
-            <div class='last-quote'>Lahir untuk Respublica</div>
+            <div className='last-quote'>Lahir untuk Respublica</div>
           </div>
           <FeaturedBlogs />
         </div>
