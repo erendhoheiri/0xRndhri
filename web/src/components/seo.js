@@ -38,6 +38,10 @@ const SEO = ({ title, description }) => {
         property='og:description'
         content='Jelajahi situs resmi Front Perjuangan Pemuda Indonesia (FPPI).'
       />
+      <meta
+        name='google-site-verification'
+        content='-PIQMM3cBRmVzjarMvwFBY5NXmBd1pXcaWFhP_b72cg'
+      />
       <link
         rel='stylesheet'
         href='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'
