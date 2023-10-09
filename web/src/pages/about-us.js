@@ -87,7 +87,7 @@ function AboutUs() {
               kosong penguasa dan basa-basi kelompok elit reaksioner. Demi
               inilah <b>Front Perjuangan Pemuda Indonesia</b> lahir.
             </div>
-            <h1>SIKAP POLITIK </h1>
+            <h1>Sikap Politik</h1>
             <div className='item__detail'>
               Tribalisme akibat tiadanya kebanggaan dan penghargaan pusat kepada
               daerah, sentimen anti jawa akibat kesalahan Soeharto plus
