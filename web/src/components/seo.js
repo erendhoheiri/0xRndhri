@@ -24,6 +24,20 @@ const SEO = ({ title, description }) => {
   return (
     <Helmet title={seo.title}>
       <meta name='description' content={seo.description} />
+      <meta
+        name='keywords'
+        content='FPPI, Front Perjuangan Pemuda Indonesia, Gerakan Pemuda Indonesia, Organisasi Pemuda, Situs Resmi'
+      />
+      <meta name='author' content='Front Perjuangan Pemuda Indonesia' />
+      <meta name='robots' content='index, follow' />
+      <meta
+        property='og:title'
+        content='Situs Resmi - Front Perjuangan Pemuda Indonesia (FPPI)'
+      />
+      <meta
+        property='og:description'
+        content='Jelajahi situs resmi Front Perjuangan Pemuda Indonesia (FPPI).'
+      />
       <link
         rel='stylesheet'
         href='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'

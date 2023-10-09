@@ -3,7 +3,7 @@ const sanityConfig = require('./sanity-config.js');
 
 module.exports = {
   siteMetadata: {
-    title: `Official Website - Front Perjuangan Pemuda Indonesia`,
+    title: `Situs Resmi - Front Perjuangan Pemuda Indonesia (FPPI)`,
     siteUrl: `https://rakyatkuasa.com`,
     description: `Website resmi Front Perjuangan Pemuda Indonesia (FPPI) adalah sumber informasi utama yang menyediakan berbagai konten terkait dengan organisasi FPPI.`
   },
