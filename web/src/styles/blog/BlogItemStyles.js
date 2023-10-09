@@ -8,6 +8,7 @@ export const BlogItemStyles = styled.div`
     margin-bottom: 1.5rem;
     border-radius: 12px;
     filter: grayscale(100%);
+    width: 100%;
     [data-main-image] {
       transition: 0.3s ease-in-out transform;
     }
