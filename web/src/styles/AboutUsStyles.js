@@ -8,6 +8,7 @@ export const AboutUsStyles = styled.div`
       margin-bottom: 1rem;
       color: var(--primary);
     }
+
     .item__detail {
       font-size: 1.6rem;
       margin-bottom: 1rem;
@@ -56,6 +57,15 @@ export const AboutUsStyles = styled.div`
     }
   }
   @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.5em !important;
+    }
+    .quote {
+      font-size: 1.4em !important;
+    }
+    .item__detail {
+      font-size: 1.4rem !important;
+    }
     .pageHeader {
       padding: 0;
       &:after {

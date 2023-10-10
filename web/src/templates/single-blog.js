@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { format } from 'date-fns';
 import { BiCategory } from 'react-icons/bi';
 import { FiCalendar, FiUser } from 'react-icons/fi';
+import { useLocation } from '@reach/router';
 import PageSpace from '../components/PageSpace';
 import ParagraphText from '../components/typography/ParagraphText';
 import { Title } from '../components/typography/Title';
@@ -11,7 +12,6 @@ import { SingleBlogStyles } from '../styles/blog/SingleBlogStyles';
 import MyPortableText from '../components/MyPortableText';
 import SEO from '../components/seo';
 import ShareButtons from '../components/ShareButtons';
-import { useLocation } from '@reach/router';
 
 export const postQuery = graphql`
   query SingleBlogQuery($id: String!) {
@@ -97,7 +97,7 @@ function SingleBlog({ data }) {
         <ShareButtons
           title={blog.title}
           url={url}
-          twitterHandle={'RakyatKuasa'}
+          twitterHandle='RakyatKuasa'
           tags={['FPPI', 'FPPINASIONAL', 'RakyatKuasa']}
         />
       </div>

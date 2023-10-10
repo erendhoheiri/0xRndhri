@@ -94,7 +94,7 @@ export const SejarahSingkatContent = styled.div`
   line-height: 3rem;
   // text-align: justify;
   @media screen and (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 2.5rem;
   }
 `;
