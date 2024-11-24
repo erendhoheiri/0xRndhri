@@ -7,6 +7,7 @@ import SEO from '../components/seo';
 import { AboutUsStyles } from '../styles/AboutUsStyles';
 import FeaturedBlogs from '../components/homePage/FeaturedBlogs';
 
+
 function AboutUs() {
   const images = {
     images: {
@@ -86,7 +87,16 @@ function AboutUs() {
               ini adalah proses gerakan revolusioner untuk mengakhiri omong
               kosong penguasa dan basa-basi kelompok elit reaksioner. Demi
               inilah <b>Front Perjuangan Pemuda Indonesia</b> lahir.
+              <div className='space' />
+              Secara organisasi, Front Perjuangan Pemuda Indonesia digagas pada akhir November tahun 1998 dalam pertemuan di Muntilan, Magelang, Jawa Tengah. Setelah diskusi panjang, menghitung kembali elemen pergerakan pasca Semanggi, peserta pertemuan menyatakan akan membangun organisasi skala nasional, dengan nama Front Perjuangan Pemuda Indonesia.
+              <div className='space' />
+              Jauh sebelum moment tersebut, jaringan elemen pergerakan rakyat yang menjadi bibit terbentuknya Front Perjuangan Pemuda Indonesia telah mengalami berbagai pergolakan. Diawali dengan adanya Forum Komunikasi Mahasiswa lintas kota, yang, di Yogyakarta bernamakan Forum Komunikasi Mahasiswa Yogyakarta (FKMY) pada dekade 70’an. Selanjutnya mengalami pergolakan di dalam tubuh FKMY yang akhirnya elemen pergerakan terpecah menjadi dua, yakni Dewan Mahasiswa dan Pemuda Yogyakarta (DMPY) serta Serikat Mahasiswa Yogyakarta (SMY). Dewan Mahasiswa Yogyakarta kemudian bertransformasi menjadi Persatuan Perjuangan Pemuda Yogyakarta (PPPY). Sedangkan Serikat Mahasiswa Yogyakarta berubah menjadi Serikat Mahasiswa Indonesia untuk Demokrasi (SMID). Menjelang akhir kekuasaan Soeharto, PPPY bertransformasi menjadi FPPI. Sedangkan SMID beralih menjadi Persatuan Rakyat Demokratik (PRD).
+              <div className='space' />
+              Selama perjalanan panjang perjuangannya FKMY hingga FPPI melakukan berbagai pendampingan masyarakat baik di wilayah konflik maupun pemberdayaan. Pembelaan kasus tanah di Probolinggo, Blitar, Gresik, Kendal, Wonosobo, Yogyakarta, Ngawi dan daerah lainnya. Selain itu, pendampingan di sektor Buruh/Pekerja juga dilakukan oleh FPPI.
             </div>
+
+
+
             <h1>Sikap Politik</h1>
             <div className='item__detail'>
               Tribalisme akibat tiadanya kebanggaan dan penghargaan pusat kepada

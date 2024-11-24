@@ -26,7 +26,7 @@ export const ContactStyles = styled.div`
     }
   }
   .contact__container {
-    padding-top: 10rem;
+    padding: 10rem 0;
     display: flex;
 
     .google__maps {

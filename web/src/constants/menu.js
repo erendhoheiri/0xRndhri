@@ -12,6 +12,10 @@ export const menu = [
     path: '/blogs'
   },
   {
+    title: 'Struktur Nasional',
+    path: '/struktur'
+  },
+  {
     title: 'Kontak',
     path: '/contact'
   }

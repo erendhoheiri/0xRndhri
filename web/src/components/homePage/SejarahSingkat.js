@@ -19,7 +19,11 @@ function SejarahSingkat() {
         November 1998 dalam pertemuan di Muntilan, Magelang, Jawa Tengah setelah
         diskusi panjang "Menghitung Kekuatan Elemen Pergerakan Pasca Semanggi"
         antar elemen lintas jaringan Jawa-Bali.
-      </SejarahSingkatContent>
+        <br/>
+        <br/>
+        Penyebaran gagasan <i>Nasional Demokrasi Kerakyatan</i> yang berpijak kepada sikap independen adalah tradisi yang terus menerus diperkuat oleh FPPI lewat kerja-kerja ditingkatan kota.
+        Bagi Front Perjuangan Pemuda Indonesia, yang terpenting adalah gagasan membangun Indonesia Raya menuju demokrasi sejati yang sanggup mengakomodir kepentingan semua pihak dan golongan dan juga keberpihakan kepada masyarakat yang dilemahkan oleh sistem negara.
+        </SejarahSingkatContent>
       <div className='button-wrapper'>
         <ButtonStyles
           className='button-see'
