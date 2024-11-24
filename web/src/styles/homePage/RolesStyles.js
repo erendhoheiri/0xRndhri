@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const RolesStyles = styled.div`
-  // padding: 4rem 2rem;
   background-color: #f9fafb;
   color: #333;
   max-width: 1200px;
@@ -10,6 +9,9 @@ export const RolesStyles = styled.div`
   h2 {
     text-align: center;
     font-size: 3rem;
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
     margin-bottom: 2rem;
     color: #222;
   }
@@ -32,6 +34,9 @@ export const RoleCard = styled.div`
 
 export const RoleTitle = styled.div`
   font-size: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
   font-weight: bold;
   color: #444;
   display: flex;
