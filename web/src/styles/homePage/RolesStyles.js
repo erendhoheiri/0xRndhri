@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const RolesStyles = styled.div`
-  padding: 4rem 2rem;
+  // padding: 4rem 2rem;
   background-color: #f9fafb;
   color: #333;
   max-width: 1200px;

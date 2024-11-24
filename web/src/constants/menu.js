@@ -13,7 +13,7 @@ export const menu = [
   },
   {
     title: 'Struktur Nasional',
-    path: '/struktur'
+    path: '/struktur-organisasi'
   },
   {
     title: 'Kontak',
